@@ -1,42 +1,40 @@
-# AI Generated Strategy Documentation
+# Fusemachine's AI Strategy Generator
 
-This Python script generates a business strategy using AI-powered tools and presents it in HTML format. The strategy is tailored to address specific business challenges, with a focus on cutting-edge technologies, AI, machine learning, and data science. The generated strategy aims to ensure growth and efficiency for the company, as exemplified by the use case of "Fusemachines" in the provided script.
+## Overview
+This script generates an AI-driven business strategy tailored specifically for Fusemachines, an enterprise operating in the field of Enterprise Artificial Intelligence (AI). It utilizes the Gemini API from Google's GenerativeAI platform to generate the strategy based on the input provided by the user. The resulting strategy is presented in an HTML report format for easy visualization and analysis.
 
-## Script Overview
-The script consists of the following main components:
-
-1. **Function to Generate Business Strategy**: This function utilizes the Gemini API from Google's Generative AI platform to generate a business strategy based on user-defined inputs such as the company name, industry, and business challenge.
-
-2. **Function to Generate HTML Report**: This function formats the generated strategy into HTML markup for easy visualization and presentation. It includes styling for better readability and presentation.
+## Requirements
+- Google Colab environment
+- Google account with access to GenerativeAI services
+- Gemini API key obtained from [ai.google.dev](https://ai.google.dev)
 
 ## Usage
+1. **Run the Script**: Execute the script in a Google Colab environment.
+2. **Provide Inputs**: The script automatically sets Fusemachines as the company name and provides a predefined company industry description. Enter the specific business challenge faced by Fusemachines when prompted.
+3. **View Generated Strategy**: The script generates an HTML report showcasing the AI-generated business strategy tailored to Fusemachines and the provided challenge.
+4. **Analyze and Interpret**: Review the generated strategy to gain insights and recommendations for addressing Fusemachines' business challenge in the field of AI.
 
-To use this script:
+## Script Structure
+The script consists of the following components:
 
-1. Ensure you have access to the Google Generative AI platform and have obtained an API key.
-2. Import the required libraries: `IPython.display`, `google.generativeai`, and `google.colab.userdata`.
-3. Define the `generate_business_strategy()` function with appropriate inputs for the company name, industry, and business challenge.
-4. Define the `generate_html_report()` function to format the generated strategy into HTML format.
-5. Call the `generate_business_strategy()` function to generate the strategy.
-6. Call the `generate_html_report()` function to generate the HTML report.
-7. Display the HTML report using the `display()` function from `IPython.display`.
+### 1. `generate_business_strategy()` Function
+- This function automatically sets Fusemachines as the company name and provides a predefined description of the company's industry.
+- It prompts the user to input the specific business challenge faced by Fusemachines.
+- The user input is formatted into a pre-prompt template and sent to the Gemini API for generating the business strategy.
+- Returns the generated strategy text, the provided challenge, and the company name.
 
-## Example
+### 2. `generate_html_report()` Function
+- Takes the generated strategy text, challenge, and company name as inputs.
+- Formats the strategy into HTML format for better visualization.
+- Returns the HTML content of the report.
 
-Here's an example usage of the script:
+### 3. Main Execution Flow
+- Calls `generate_business_strategy()` to obtain the AI-generated strategy, challenge, and company name.
+- Utilizes `generate_html_report()` to generate an HTML report based on the obtained data.
+- Displays the HTML report using the `display(HTML(html_report))` function from IPython.
 
-```python
-# Generate business strategy based on user input
-strategy, challenge, company_name = generate_business_strategy()
-
-# Generate HTML report
-html_report = generate_html_report(strategy, challenge, company_name)
-
-# Display HTML report
-display(HTML(html_report))
-```
-
-## Note
-- Ensure that you replace the placeholder text and user inputs with actual company information and business challenges to generate relevant strategies.
-- It's recommended to run this script in an environment that supports Python, such as Google Colab or Jupyter Notebook.
-- The script utilizes Gemini API, so make sure you have proper access and authorization to use them. https://ai.google.dev/ 
+## Notes
+- **API Key**: Ensure that you have a valid API key for accessing the Gemini API. You can obtain the API key from [ai.google.dev](https://ai.google.dev).
+- **Google Colab**: This script is designed to run in a Google Colab environment due to its dependencies on Google libraries and services.
+- **Input Validation**: The script currently assumes that the user will provide valid inputs for the business challenge. Additional input validation can be implemented for robustness.
+- **Styling**: The HTML report is styled using CSS for better readability and presentation. You can customize the styling as needed by modifying the CSS styles within the script.
