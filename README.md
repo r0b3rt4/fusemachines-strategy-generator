@@ -1,7 +1,8 @@
-# Fusemachine's AI Strategy Generator
+# Mindbody's AI Strategy Generator
 
 ## Overview
-This script generates an AI-driven business strategy tailored specifically for Fusemachines, an enterprise operating in the field of Enterprise Artificial Intelligence (AI). It utilizes the Gemini API from Google's GenerativeAI platform to generate the strategy based on the input provided by the user. The resulting strategy is presented in an HTML report format for easy visualization and analysis.
+This script leverages Google's GenerativeAI platform (specifically the Gemini API) to craft an AI-driven business strategy customized for Mindbody, a leader in cloud-based wellness business management software. The generated strategy is delivered in an easily digestible HTML report format.
+
 
 ## Requirements
 - Google Colab environment
@@ -10,16 +11,16 @@ This script generates an AI-driven business strategy tailored specifically for F
 
 ## Usage
 1. **Run the Script**: Execute the script in a Google Colab environment.
-2. **Provide Inputs**: The script automatically sets Fusemachines as the company name and provides a predefined company industry description. Enter the specific business challenge faced by Fusemachines when prompted.
-3. **View Generated Strategy**: The script generates an HTML report showcasing the AI-generated business strategy tailored to Fusemachines and the provided challenge.
-4. **Analyze and Interpret**: Review the generated strategy to gain insights and recommendations for addressing Fusemachines' business challenge in the field of AI.
+2. **Provide Inputs**: The script automatically sets Mindbody as the company name and provides a predefined company industry description. Enter the specific business challenge faced by Mindbody when prompted.
+3. **View Generated Strategy**: The script generates an HTML report showcasing the AI-generated business strategy tailored to Mindbody and the provided challenge.
+4. **Analyze and Interpret**: Review the generated strategy to gain insights and recommendations for addressing Mindbody's business challenge in the field of AI.
 
 ## Script Structure
 The script consists of the following components:
 
 ### 1. `generate_business_strategy()` Function
-- This function automatically sets Fusemachines as the company name and provides a predefined description of the company's industry.
-- It prompts the user to input the specific business challenge faced by Fusemachines.
+- This function automatically sets Mindbody as the company name and provides a predefined description of the company's industry.
+- It prompts the user to input the specific business challenge faced by Mindbody.
 - The user input is formatted into a pre-prompt template and sent to the Gemini API for generating the business strategy.
 - Returns the generated strategy text, the provided challenge, and the company name.
 
