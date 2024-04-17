@@ -1,4 +1,4 @@
-# Gerador de Estratégias de IA para Grendene
+# Gerador de Estratégias de Dados para Grendene
 
 ## Visão Geral
 Este script utiliza a plataforma GenerativeAI da Google (especificamente a API Gemini) para criar uma estratégia de negócios impulsionada por IA personalizada para a Grendene, uma fabricante líder no setor de calçados e moda. A estratégia gerada é entregue em um formato de relatório HTML de fácil compreensão.
