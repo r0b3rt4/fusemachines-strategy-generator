@@ -1,41 +1,40 @@
-# Mindbody's AI Strategy Generator
+# Gerador de Estratégias de IA para Grendene
 
-## Overview
-This script leverages Google's GenerativeAI platform (specifically the Gemini API) to craft an AI-driven business strategy customized for Mindbody, a leader in cloud-based wellness business management software. The generated strategy is delivered in an easily digestible HTML report format.
+## Visão Geral
+Este script utiliza a plataforma GenerativeAI da Google (especificamente a API Gemini) para criar uma estratégia de negócios impulsionada por IA personalizada para a Grendene, uma fabricante líder no setor de calçados e moda. A estratégia gerada é entregue em um formato de relatório HTML de fácil compreensão.
 
+## Requisitos
+- Ambiente Google Colab
+- Conta Google com acesso aos serviços GenerativeAI
+- Chave da API Gemini obtida em [ai.google.dev](https://ai.google.dev)
 
-## Requirements
-- Google Colab environment
-- Google account with access to GenerativeAI services
-- Gemini API key obtained from [ai.google.dev](https://ai.google.dev)
+## Uso
+1. **Execute o Script**: Execute o script em um ambiente Google Colab.
+2. **Forneça Inputs**: O script define automaticamente Grendene como o nome da empresa e fornece uma descrição predefinida da indústria da empresa. Insira o desafio empresarial específico enfrentado pela Grendene quando solicitado.
+3. **Veja a Estratégia Gerada**: O script gera um relatório HTML mostrando a estratégia de negócios gerada por IA adaptada à Grendene e ao desafio fornecido.
+4. **Analise e Interprete**: Revise a estratégia gerada para obter insights e recomendações para enfrentar o desafio empresarial da Grendene no campo da IA.
 
-## Usage
-1. **Run the Script**: Execute the script in a Google Colab environment.
-2. **Provide Inputs**: The script automatically sets Mindbody as the company name and provides a predefined company industry description. Enter the specific business challenge faced by Mindbody when prompted.
-3. **View Generated Strategy**: The script generates an HTML report showcasing the AI-generated business strategy tailored to Mindbody and the provided challenge.
-4. **Analyze and Interpret**: Review the generated strategy to gain insights and recommendations for addressing Mindbody's business challenge in the field of AI.
+## Estrutura do Script
+O script é composto pelos seguintes componentes:
 
-## Script Structure
-The script consists of the following components:
+### 1. Função `generate_business_strategy()`
+- Esta função define automaticamente Grendene como o nome da empresa e fornece uma descrição predefinida da indústria da empresa.
+- Solicita ao usuário que insira o desafio empresarial específico enfrentado pela Grendene.
+- A entrada do usuário é formatada em um modelo prévio e enviado à API Gemini para gerar a estratégia de negócios.
+- Retorna o texto da estratégia gerada, o desafio fornecido e o nome da empresa.
 
-### 1. `generate_business_strategy()` Function
-- This function automatically sets Mindbody as the company name and provides a predefined description of the company's industry.
-- It prompts the user to input the specific business challenge faced by Mindbody.
-- The user input is formatted into a pre-prompt template and sent to the Gemini API for generating the business strategy.
-- Returns the generated strategy text, the provided challenge, and the company name.
+### 2. Função `generate_html_report()`
+- Recebe o texto da estratégia gerada, o desafio e o nome da empresa como entradas.
+- Formata a estratégia em formato HTML para melhor visualização.
+- Retorna o conteúdo HTML do relatório.
 
-### 2. `generate_html_report()` Function
-- Takes the generated strategy text, challenge, and company name as inputs.
-- Formats the strategy into HTML format for better visualization.
-- Returns the HTML content of the report.
+### 3. Fluxo Principal de Execução
+- Chama `generate_business_strategy()` para obter a estratégia de negócios gerada por IA, o desafio e o nome da empresa.
+- Utiliza `generate_html_report()` para gerar um relatório HTML com base nos dados obtidos.
+- Exibe o relatório HTML usando a função `display(HTML(html_report))` do IPython.
 
-### 3. Main Execution Flow
-- Calls `generate_business_strategy()` to obtain the AI-generated strategy, challenge, and company name.
-- Utilizes `generate_html_report()` to generate an HTML report based on the obtained data.
-- Displays the HTML report using the `display(HTML(html_report))` function from IPython.
-
-## Notes
-- **API Key**: Ensure that you have a valid API key for accessing the Gemini API. You can obtain the API key from [ai.google.dev](https://ai.google.dev).
-- **Google Colab**: This script is designed to run in a Google Colab environment due to its dependencies on Google libraries and services.
-- **Input Validation**: The script currently assumes that the user will provide valid inputs for the business challenge. Additional input validation can be implemented for robustness.
-- **Styling**: The HTML report is styled using CSS for better readability and presentation. You can customize the styling as needed by modifying the CSS styles within the script.
+## Notas
+- **Chave da API**: Certifique-se de ter uma chave de API válida para acessar a API Gemini. Você pode obter a chave da API em [ai.google.dev](https://ai.google.dev).
+- **Google Colab**: Este script foi projetado para ser executado em um ambiente Google Colab devido às suas dependências em bibliotecas e serviços da Google.
+- **Validação de Entrada**: O script atualmente assume que o usuário fornecerá entradas válidas para o desafio empresarial. Validação adicional de entrada pode ser implementada para robustez.
+- **Estilo**: O relatório HTML é estilizado usando CSS para melhor legibilidade e apresentação. Você pode personalizar o estilo conforme necessário, modificando os estilos CSS dentro do script.
